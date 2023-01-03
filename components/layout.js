@@ -24,24 +24,31 @@ const press = Press_Start_2P({
 
 
 const navContainer = {
-  marginTop: '0',
-  paddingTop: '4rem',
+  backgroundColor: '#F4EDE5',
+  paddingTop: '1rem',
+  paddingBottom: '0.5rem',
+  paddingLeft: '2rem',
   textAlign: 'right',
   display: 'flex',
   position: 'sticky',
-  top: '20px',
+  top: '0px',
+  zIndex: '1',
+  borderBottom: '1px solid #E0C6AC',
 };
 
 const navItem = {
-  padding:'3rem',
+  padding:'1rem',
+  marginLeft: '2rem',
   color: '#000000',
   fontSize: "1.5rem",
+  fontWeight: 'bold',
 };
 
 const Layout = () => {
   return (
   <nav className={`${space.className}`} style = {navContainer}>
           <Image
+          className="marginRight: 2rem"
         src={teapot}
         alt="teapot logo"
         width={160} 
