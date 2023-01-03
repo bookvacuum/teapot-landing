@@ -18,6 +18,15 @@
  }
 
 
+.content {
+  margin-top: 3rem;
+  justify-content: center;
+  /* width: 50%; */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 .header {
   color: #EF83F8;
   font-size: 2.5rem;
@@ -27,7 +36,6 @@
   position: relative;
   max-width: 90%;
 }
-
 
 .subheader {
   color: #FFFFFF;

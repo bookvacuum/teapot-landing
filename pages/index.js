@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.css";
 
 import {Space_Grotesk} from '@next/font/google';
 import Image from 'Next/image';
-import teapot from '../public/teapotlg.png'
+import teapot from '../public/browntp.png'
 
 
 
@@ -36,21 +36,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
     </Head>
     <div className={styles.container}>
-      {/* <Image
-        src={teapot}
-        alt="teapot logo"
-        width={160} 
-        height={60} 
-      /> */}
       <Layout/> 
-
+      <div className={styles.content}>
+        <Image src={teapot} alt="Picture of the author"/>
+        <h1>hi hi hi</h1>
+      </div> 
   
-      <h1 className={`${styles.header}`}>
-      Quest is the world’s first ecosystem for community-driven crowdsourcing and monetization of data.
-      </h1>
-      <h3 className={styles.subheader}>
-      We build technologies that solve collective action problems in ways that were not thought to be possible before.
-      </h3>
+      
  
     </div>
     </>
