@@ -3,21 +3,22 @@ import Layout from "../components/layout";
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 
-import {Lexend} from '@next/font/google';
+import {Space_Grotesk} from '@next/font/google';
+import Image from 'Next/image';
+import teapot from '../public/teapotlg.png'
 
 
 
 // If loading a variable font, you don't need to specify the font weight
-const lexend = Lexend({
+const space = Space_Grotesk({
    subsets: ['latin'],
   //  display: "fallback",
   })
 
 
 const title = {
-  color: "#EF83F8",
-  fontSize: "4rem",
-  fontFamily: "puffin-arcade-chrome",
+  color: "#1F331A",
+  fontSize: "2rem",
   marginLeft: '3rem',
   marginTop: "2.3rem",
   float: 'left',
@@ -35,19 +36,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
     </Head>
     <div className={styles.container}>
-      <h1 style={title}>
-          Quest
-      </h1>
+      {/* <Image
+        src={teapot}
+        alt="teapot logo"
+        width={160} 
+        height={60} 
+      /> */}
       <Layout/> 
 
-    <div>
-      <h1 className={`${lexend.className} ${styles.header}`}>
+  
+      <h1 className={`${styles.header}`}>
       Quest is the world’s first ecosystem for community-driven crowdsourcing and monetization of data.
       </h1>
       <h3 className={styles.subheader}>
       We build technologies that solve collective action problems in ways that were not thought to be possible before.
       </h3>
-    </div>  
+ 
     </div>
     </>
   );
