@@ -6,6 +6,7 @@ import Image from 'Next/image';
 import teapot from '../public/teapotlg.png'
 import {Space_Grotesk} from '@next/font/google';
 
+import Head from 'next/head'
 
 
 
@@ -46,6 +47,10 @@ const navItem = {
 
 const Layout = () => {
   return (
+    <>
+    <Head> 
+    <meta charset="UTF-8"/>
+    </Head>
   <nav className={`${space.className}`} style = {navContainer}>
           <Image
           className="marginRight: 2rem"
@@ -58,10 +63,10 @@ const Layout = () => {
         about us
       </Link>
       <Link href="/pricing" style = {navItem}>
-        spill the tea
+        spill the tea &#x1F618;
       </Link>
     </nav>
-    
+    </>
   )
 };
 
