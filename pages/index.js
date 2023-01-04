@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 
-import {Space_Grotesk, Lexend} from '@next/font/google';
+import {Space_Grotesk, Lexend, Autour_One} from '@next/font/google';
 import Image from 'Next/image';
 import teapot from '../public/browntp.png';
 
@@ -21,13 +21,9 @@ const lexend = Lexend({
   display: "fallback",
 })
 
-const title = {
-  color: "#1F331A",
-  fontSize: "2rem",
-  marginLeft: '3rem',
-  marginTop: "2.3rem",
-  float: 'left',
-  position: 'relative',
+const image = {
+width: '8rem',
+height: 'auto',
 };
 
 
@@ -43,7 +39,7 @@ export default function Home() {
     <div className={styles.container}>
       <Layout/> 
       <div className={styles.content}>
-        <Image src={teapot} alt="Picture of teapot"/>
+        <Image style = {image} src={teapot} alt="Picture of teapot"/>
         <h1 className={styles.header}>what is teapot?</h1>
         <p className={`${styles.paragraph} ${lexend.className}`}>Teapot is a place you can submit an honest review of your workplace. We provide increased <strong>privacy</strong> and <strong>anonymity</strong> through AI.</p>
         <div className={styles.second}>

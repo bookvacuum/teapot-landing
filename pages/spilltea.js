@@ -5,6 +5,10 @@ import styles from "../styles/Home.module.css";
 import Script from 'next/script';
 
 
+const survey = {
+  marginTop:'2rem',
+};
+
 export default function Spill() {
   
   return (
@@ -17,9 +21,7 @@ export default function Spill() {
     </Head>
     <div className={styles.container}>
       <Layout/> 
-
-      <iframe data-tally-src="https://tally.so/embed/mVpqjN?hideTitle=1&transparentBackground=1&dynamicHeight=1" width="100%" height="542" frameborder="0" marginheight="0" marginwidth="0" title="Spill the real tea with the help of AI. "></iframe>        
-     
+      <iframe style = {survey} data-tally-src="https://tally.so/embed/mVpqjN?hideTitle=1&transparentBackground=1&dynamicHeight=1" width="100%" height="542" frameborder="0" marginheight="0" marginwidth="0" title="Spill the real tea with the help of AI. "></iframe>        
       </div> 
 
     </>
