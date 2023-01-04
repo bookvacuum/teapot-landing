@@ -6,20 +6,19 @@ import styles from "../styles/Home.module.css";
 import {Space_Grotesk, Lexend} from '@next/font/google';
 import Image from 'Next/image';
 import teapot from '../public/browntp.png';
-import Script from 'next/script';
 
 
 
 // If loading a variable font, you don't need to specify the font weight
 const space = Space_Grotesk({
    subsets: ['latin'],
-  //  display: "fallback",
+   display: "fallback",
   })
 
 
 const lexend = Lexend({
    subsets: ['latin'],
-  //  display: "fallback",
+  display: "fallback",
 })
 
 const title = {
@@ -44,7 +43,7 @@ export default function Home() {
     <div className={styles.container}>
       <Layout/> 
       <div className={styles.content}>
-        <Image src={teapot} alt="Picture of the author"/>
+        <Image src={teapot} alt="Picture of teapot"/>
         <h1 className={styles.header}>what is teapot?</h1>
         <p className={`${styles.paragraph} ${lexend.className}`}>Teapot is a place you can submit an honest review of your workplace. We provide increased <strong>privacy</strong> and <strong>anonymity</strong> through AI.</p>
         <div className={styles.second}>

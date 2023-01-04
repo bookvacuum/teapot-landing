@@ -6,17 +6,22 @@ import Script from 'next/script';
 
 
 export default function Spill() {
+  
   return (
     <>
     <Head>
         <title>send love to the homies who need it</title>
         <meta name="description" content="quit now, bro" />
         <link rel="icon" href="/favicon.ico" />
+        <script async src="https://tally.so/widgets/embed.js"/> 
     </Head>
     <div className={styles.container}>
       <Layout/> 
-      <iframe data-tally-src="https://tally.so/embed/mVpqjN?hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="542" frameborder="0" marginheight="0" marginwidth="0" title="Spill the real tea with the help of AI. "></iframe>        <Script src="https://tally.so/widgets/embed.js"/>
+
+      <iframe data-tally-src="https://tally.so/embed/mVpqjN?hideTitle=1&transparentBackground=1&dynamicHeight=1" width="100%" height="542" frameborder="0" marginheight="0" marginwidth="0" title="Spill the real tea with the help of AI. "></iframe>        
+     
       </div> 
+
     </>
   );
 }

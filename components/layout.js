@@ -52,6 +52,7 @@ const Layout = () => {
     <meta charSet="UTF-8"/>
     </Head>
   <nav className={`${space.className}`} style = {navContainer}>
+        <Link href="/" >
           <Image
           className="marginRight: 2rem"
         src={teapot}
@@ -59,6 +60,7 @@ const Layout = () => {
         width={160} 
         height={60} 
       />
+      </Link>
       <Link href="/" style = {navItem}>
         about us
       </Link>
