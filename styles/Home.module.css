@@ -4,8 +4,6 @@
   background-image: url("/Leafym.svg");
   background-size: cover;
   height: 220rem;
-
-
 }
 
 
@@ -19,32 +17,30 @@
 
 
 .content {
-  margin-top: 3rem;
+  margin-top: 8rem;
   justify-content: center;
-  /* width: 50%; */
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  width: 50%;
+}
+
+.paragraph {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.second {
+  margin-top: 6rem;
 }
 
 .header {
-  color: #EF83F8;
-  font-size: 2.5rem;
-  text-align: left;
-  margin-top: 8rem;
-  margin-left: 3.5rem;
-  position: relative;
-  max-width: 90%;
+  color: #1F331A;
+  font-size: 2rem;
+  margin-top: 0.3rem;
 }
 
-.subheader {
-  color: #FFFFFF;
-  font-size: 1.5rem;
-  font-weight: 300;
-  max-width: 70%;
-  margin-left: 3.5rem;
-  /* margin-top: 8rem; */
-}
+
 /* 
 .footer {
   width: 100%;
