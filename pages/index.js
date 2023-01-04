@@ -5,7 +5,8 @@ import styles from "../styles/Home.module.css";
 
 import {Space_Grotesk, Lexend} from '@next/font/google';
 import Image from 'Next/image';
-import teapot from '../public/browntp.png'
+import teapot from '../public/browntp.png';
+import Script from 'next/script';
 
 
 
@@ -54,10 +55,8 @@ export default function Home() {
           <h1 className={styles.header}>ready to spill the tea?</h1>
           <p className={`${styles.paragraph} ${lexend.className}`}>Join our open beta for Teapot by submitting a review of an employer you worked with, interned at, or even applied to. Thank you for being a part of our community! 💘</p>
         </div>
-
       </div> 
-      
- 
+
     </div>
     </>
   );

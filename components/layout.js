@@ -49,7 +49,7 @@ const Layout = () => {
   return (
     <>
     <Head> 
-    <meta charset="UTF-8"/>
+    <meta charSet="UTF-8"/>
     </Head>
   <nav className={`${space.className}`} style = {navContainer}>
           <Image
@@ -62,7 +62,7 @@ const Layout = () => {
       <Link href="/" style = {navItem}>
         about us
       </Link>
-      <Link href="/pricing" style = {navItem}>
+      <Link href="/spilltea" style = {navItem}>
         spill the tea &#x1F618;
       </Link>
     </nav>
