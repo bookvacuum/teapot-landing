@@ -22,6 +22,7 @@
 }
 
 .mobileNavBar {
+  top: 1.65rem; 
  right: 30px;
  position: absolute;
 }
@@ -52,6 +53,21 @@
   width: 80%;
 }
 
+.paragraph {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.second {
+  margin-top: 6rem;
+}
+
+.header {
+  color: #1F331A;
+  font-size: 1.5rem;
+  margin-top: 0.3rem;
+}
+
  @media (min-width: 760px) {
   .container {
     width: 100%;
@@ -77,25 +93,18 @@
     width: 50%;
   }
 
+  .paragraph {
+    font-size: 1.3rem;
+
+  }
+
+  .header {
+    font-size: 2rem;
+  }
  }
 
 
 
-
-.paragraph {
-  font-size: 1.3rem;
-  font-weight: 200;
-}
-
-.second {
-  margin-top: 6rem;
-}
-
-.header {
-  color: #1F331A;
-  font-size: 2rem;
-  margin-top: 0.3rem;
-}
 
 
 /* 

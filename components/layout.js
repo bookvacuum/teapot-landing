@@ -43,13 +43,13 @@ const Layout = () => {
         height={60} 
       />
       </Link>
-      <Link href="/" className= {styles.navItem}>
+      <Link href="/about" className= {styles.navItem}>
         about us
       </Link>
       <Link href="/spilltea" className= {styles.navItem}>
         spill the tea &#x1F618;
       </Link>
-      <Link href="/spilltea" className= {styles.navItem}>
+      <Link href="/readtea" className= {styles.navItem}>
         read the tea
       </Link>
        <Image
@@ -57,16 +57,16 @@ const Layout = () => {
           className={styles.mobileNavBar}
           src={menu}
           alt="menu"
-          width={60} 
-          height={60} 
+          width={40} 
+          height={40} 
         />
     </nav>
    
     {mobileNavActive &&
          <div className={styles.mobileNavBarLinkContainer}> 
-          <Link href="/" className={styles.mobileNavBarLink}>about us</Link>
+          <Link href="/about" className={styles.mobileNavBarLink}>about us</Link>
           <Link href="/spilltea" className={styles.mobileNavBarLink}>spill the tea &#x1F618;</Link>
-          <Link href="/spilltea" className= {styles.mobileNavBarLink}> read the tea</Link>
+          <Link href="/readtea" className= {styles.mobileNavBarLink}> read the tea</Link>
         </div> 
     }
   </>
