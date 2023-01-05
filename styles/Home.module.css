@@ -12,7 +12,7 @@
   background-color: #F4EDE5;
   padding-top: 1rem;
   padding-bottom: 0.5rem;
-  padding-left: 2rem;
+  padding-left: 0.7rem;
   text-align: right;
   display: flex;
   position: sticky;
@@ -22,10 +22,18 @@
 }
 
 .mobileNavBar {
- right: 25px;
+ right: 30px;
  position: absolute;
 }
 
+.content {
+  margin-top: 4rem;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 80%;
+}
 
  @media (min-width: 760px) {
   .container {
@@ -41,21 +49,21 @@
     font-size: 1.5rem;
     font-weight: bold;
   }
-
+  .navContainer {
+    padding-left: 1.5rem;
+  }
   .mobileNavBar {
     display: none;
     }
+  .content {
+    margin-top: 8rem;
+    width: 50%;
+  }
+
  }
 
 
-.content {
-  margin-top: 8rem;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  width: 50%;
-}
+
 
 .paragraph {
   font-size: 1.3rem;
