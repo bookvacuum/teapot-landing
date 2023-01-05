@@ -1,17 +1,47 @@
-
-
 .container {
   background-image: url("/Leafym.svg");
   background-size: cover;
   height: 220rem;
 }
 
+.navItem {
+  display: none;
+}
 
- @media (min-width: 1000px) {
+.mobileNavBar {
+  float: right;
+}
+
+
+ @media (min-width: 760px) {
   .container {
     width: 100%;
       background-image: url("/Leafy.svg");
       background-size: cover;
+    }
+  .navContainer {
+    background-color: #F4EDE5;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 2rem;
+    text-align: right;
+    display: flex;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    border-bottom: 1px solid #E0C6AC;
+  }
+  .navItem {
+    display: flex;
+    padding: 1rem;
+    margin-left: 2rem;
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .mobileNavBar {
+    display: none;
     }
  }
 
