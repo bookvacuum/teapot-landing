@@ -8,8 +8,22 @@
   display: none;
 }
 
+.navContainer {
+  background-color: #F4EDE5;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  padding-left: 2rem;
+  text-align: right;
+  display: flex;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  border-bottom: 1px solid #E0C6AC;
+}
+
 .mobileNavBar {
-  float: right;
+ right: 25px;
+ position: absolute;
 }
 
 
@@ -25,7 +39,6 @@
     padding-bottom: 0.5rem;
     padding-left: 2rem;
     text-align: right;
-    display: flex;
     position: sticky;
     top: 0px;
     z-index: 1;
