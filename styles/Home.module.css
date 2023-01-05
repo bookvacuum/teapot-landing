@@ -33,17 +33,6 @@
       background-image: url("/Leafy.svg");
       background-size: cover;
     }
-  .navContainer {
-    background-color: #F4EDE5;
-    padding-top: 1rem;
-    padding-bottom: 0.5rem;
-    padding-left: 2rem;
-    text-align: right;
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-    border-bottom: 1px solid #E0C6AC;
-  }
   .navItem {
     display: flex;
     padding: 1rem;
