@@ -26,6 +26,23 @@
  position: absolute;
 }
 
+.mobileNavBarLinkContainer {
+  height: 8rem;
+  width: 100%;
+  background-color: #E0C6AC;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0.3rem;
+  position: absolute;
+  text-align: center;
+  font-size: large;
+}
+
+.mobileNavBarLink {
+  color: #2C1D02;
+}
+
 .content {
   margin-top: 4rem;
   justify-content: center;

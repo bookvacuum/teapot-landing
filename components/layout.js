@@ -61,7 +61,16 @@ const Layout = () => {
           height={60} 
         />
     </nav>
-    </>
+   
+    {mobileNavActive &&
+         <div className={styles.mobileNavBarLinkContainer}> 
+          <Link href="/" className={styles.mobileNavBarLink}>about us</Link>
+          <Link href="/spilltea" className={styles.mobileNavBarLink}>spill the tea &#x1F618;</Link>
+          <Link href="/spilltea" className= {styles.mobileNavBarLink}> read the tea</Link>
+        </div> 
+    }
+  </>
+
   )
 };
 
