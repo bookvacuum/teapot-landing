@@ -20,7 +20,7 @@ export default function Spill() {
         <script async src="https://tally.so/widgets/embed.js"/> 
     </Head>
     <div className={styles.container}>
-      <Layout/> 
+      {/* <Layout/>  */}
       <iframe style = {survey} data-tally-src="https://tally.so/embed/mVpqjN?hideTitle=1&transparentBackground=1&dynamicHeight=1" width="100%" height="542" frameborder="0" marginheight="0" marginwidth="0" title="Spill the real tea with the help of AI. "></iframe>        
       </div> 
 

@@ -7,8 +7,7 @@ import teapot from '../public/teapotlg.png'
 import {Space_Grotesk} from '@next/font/google';
 import menu from '../public/menu.png';
 import Head from 'next/head'
-
-
+import Footer from "../components/footer";
 
 // If loading a variable font, you don't need to specify the font weight
 const space = Space_Grotesk({
@@ -25,7 +24,7 @@ const press = Press_Start_2P({
 
 
 
-const Layout = () => {
+const Layout = (props) => {
 
   const [mobileNavActive, setNavActive] = useState(null);
 
@@ -69,6 +68,8 @@ const Layout = () => {
           <Link href="/readtea" className= {styles.mobileNavBarLink}> read the tea</Link>
         </div> 
     }
+      {props.children}
+    <Footer />
   </>
 
   )

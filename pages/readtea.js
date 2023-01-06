@@ -7,7 +7,7 @@ export default function Spill() {
   return (
     <>
     <div className={styles.container}>
-      <Layout/> 
+      {/* <Layout/>  */}
       </div> 
 
     </>

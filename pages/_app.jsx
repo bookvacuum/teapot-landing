@@ -13,9 +13,13 @@ const lexend = Lexend({
 
 function MyApp({ Component, pageProps }) {
   return (
+
   <main className={lexend.className}>
+   <Layout>
   <Component {...pageProps} />
+   </Layout>
   </main>
+ 
   );
 }
 

@@ -1,7 +1,7 @@
 .container {
   background-image: url("/Leafym.svg");
   background-size: cover;
-  height: 220rem;
+  height: 75rem;
 }
 
 .navItem {
@@ -44,14 +44,40 @@
   color: #2C1D02;
 }
 
+.mobileNavBarLink:active {
+  text-decoration: wavy underline #2C1D02;
+}
+  
+
 .content {
-  margin-top: 4rem;
+  margin-top: 0;
+  padding-top: 2rem;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   width: 80%;
 }
+
+.button {
+  margin-top: 1.3rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 55%;
+  padding: 0.6rem;
+  background-color: #C3D2BB;
+  border: none;
+  color: #000000;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #90b290;
+  color: black;
+}
+
 
 .paragraph {
   font-size: 1rem;
@@ -68,6 +94,8 @@
   margin-top: 0.3rem;
 }
 
+
+
  @media (min-width: 760px) {
   .container {
     width: 100%;
@@ -80,7 +108,13 @@
     margin-left: 2rem;
     color: #000000;
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 500;
+  }
+
+  .navItem:hover {
+  text-decoration: underline #8a0a0a;
+  animation: pulse;
+  animation-timing-function: ease-in-out;
   }
   .navContainer {
     padding-left: 1.5rem;
@@ -89,7 +123,7 @@
     display: none;
     }
   .content {
-    margin-top: 8rem;
+    padding-top: 5rem;
     width: 50%;
   }
 
@@ -97,32 +131,30 @@
     font-size: 1.3rem;
 
   }
-
   .header {
     font-size: 2rem;
   }
+
+    .button {
+      width: 40%;
+    }
  }
 
 
 
 
 
-/* 
-.footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-} */
+.footer {
+  background-color: #152211;
+  padding: 6rem;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  color: #EEFFEA;
+        }
+
+
 
 .title a {
   text-decoration: none;
