@@ -1,7 +1,7 @@
 .container {
   background-image: url("/Leafym.svg");
   background-size: cover;
-  height: 65rem;
+  height: 80rem;
 }
 
 .navItem {
@@ -94,13 +94,68 @@
   margin-top: 0.3rem;
 }
 
+.profile {
+  transition: all 0.3s;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+
+.profileContainer {
+text-align: center;
+}
+
+
+.profile img {
+  max-width: 100%;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  filter: drop-shadow(-20px 0 10px rgba(0, 0, 0, 0.1));
+  cursor: pointer;
+}
+
+
+.profile .name {
+  position: absolute;
+  background-color: #10996d;
+  color: #fff;
+  font-family: "arial";
+  padding: 10px 10px;
+  border-radius: 100px;
+  bottom: -40px;
+  left: 50%;
+  white-space: nowrap;
+  transform: translate(-50%, -50px);
+  letter-spacing: 1px;
+  font-size: 15px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.profile .name::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #10996d;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.profile img:hover+.name {
+  opacity: 1;
+  transform: translateX(-50%);
+  box-shadow: 0 10px 20px rgba(86, 86, 198, 0.3);
+}
 
 
  @media (min-width: 760px) {
   .container {
     width: 100%;
-      background-image: url("/Leafy.svg");
-      background-size: cover;
+    background-image: url("/Leafy.svg");
+    background-size: cover;
+    height: 70rem;
     }
   .navItem {
     display: flex;
@@ -135,9 +190,19 @@
     font-size: 2rem;
   }
 
-    .button {
-      width: 40%;
-    }
+  .button {
+    width: 40%;
+  }
+
+  .profileContainer {
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .profile:hover {
+    transform: translateY(25px);
+  }
  }
 
 
