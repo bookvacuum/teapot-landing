@@ -4,6 +4,7 @@ import {Press_Start_2P} from '@next/font/google';
 import styles from "../styles/Home.module.css";
 import Image from 'Next/image';
 import teapot from '../public/teapotlg.png'
+import teapotBeta from '../public/teapotBeta.png'
 import {Space_Grotesk} from '@next/font/google';
 import menu from '../public/menu.png';
 import Head from 'next/head'
@@ -36,9 +37,9 @@ const Layout = (props) => {
   <nav className={`${space.className} ${styles.navContainer}`}>
         <Link href="/" >
           <Image
-        src={teapot}
+        src={teapotBeta}
         alt="teapot logo"
-        width={160} 
+        width={180} 
         height={60} 
       />
       </Link>
