@@ -29,9 +29,9 @@ export default function Spill() {
         {/* <Image style = {image} src={teapot} alt="Picture of teapot"/> */}
        <h1 className={styles.header}>our mission</h1>
           <p className={`${styles.paragraph} ${lexend.className}`}>
-We build for Amy who went to work during a level 5 storm. </p>
-        <p className={`${styles.paragraph} ${lexend.className}`}>We build for Khalid whose boss makes racist comments. </p>
-        <p className={`${styles.paragraph} ${lexend.className}`}>We build for Naomi who found her dream job after taking a risk and switching industries.</p>
+We build for Amy who went to work during a level 5 storm ⛈️ </p>
+        <p className={`${styles.paragraph} ${lexend.className}`}>We build for Khalid whose boss makes racist comments 😩</p>
+        <p className={`${styles.paragraph} ${lexend.className}`}>We build for Naomi who found her dream job after taking a risk and switching industries 🥰</p>
 
           <p className={`${styles.paragraph} ${lexend.className}`}>We built Teapot to gather meaningful stories about peoples everyday experiences at work.
           We believe better working conditions can be achieved when we are able to safely share honest stories about our workplaces. </p>
@@ -51,7 +51,7 @@ We build for Amy who went to work during a level 5 storm. </p>
         <div className={styles.profile}>
           <Image src={sunwoo} alt="Picture of sw"  width={140} 
           height={140} /> 
-          <span className={styles.name}>S is our Chief Pussy Officer</span>
+          <span className={styles.name}>S is our Chief Purr Officer</span>
         </div>
         <div className={styles.profile}>
           <Image src={michey} alt="teapot logo" width={140} height={140}/>
@@ -59,7 +59,7 @@ We build for Amy who went to work during a level 5 storm. </p>
         </div>
         <div className={styles.profile}>
            <Image src={sunho} alt="Picture of sw"  width={140} height={140} /> 
-            <span className={styles.name}>SH is our Director of Cunt</span>
+            <span className={styles.name}>SH is our Director of Meows</span>
         </div>
       </div>
 
