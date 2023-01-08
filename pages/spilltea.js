@@ -27,8 +27,9 @@ export default function Spill() {
     <iframe style = {survey} data-tally-src="https://tally.so/embed/mVpqjN?hideTitle=1&transparentBackground=1&dynamicHeight=1" width="100%" height="542" frameborder="0" marginheight="0" marginwidth="0" title="Spill the real tea with the help of AI. "></iframe>        
     
     </div> 
-      <Modal onClose={() => setShowModal(false)} show={showModal}> Hello from the modal!
+      <Modal onClose={() => setShowModal(false)} show={showModal}> This feature is currently invite-only. Please fill out this form to get early access.
     </Modal>
+    
 
     </>
 );
