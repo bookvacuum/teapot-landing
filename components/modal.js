@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
+import {Space_Grotesk, Lexend, Autour_One} from '@next/font/google';
 
 const Modal = ({ show, onClose, children, title }) => {
   const [isBrowser, setIsBrowser] = useState(false);
@@ -18,7 +19,7 @@ const Modal = ({ show, onClose, children, title }) => {
     <StyledModalOverlay>
       <StyledModal>
         <StyledModalHeader>
-          <a href="#" onClick={handleCloseClick}>
+          <a style = {ex} href="#" onClick={handleCloseClick}>
             x
           </a>
         </StyledModalHeader>
@@ -38,6 +39,15 @@ const Modal = ({ show, onClose, children, title }) => {
   }
 };
 
+
+const lexend = Lexend({
+   subsets: ['latin'],
+  display: "fallback",
+})
+
+const ex = {
+    color: '#2C1D03',
+}
 const StyledModalBody = styled.div`
   padding-top: 5px;
 `;
@@ -51,13 +61,15 @@ const StyledModalHeader = styled.div`
 const StyledModalTitle = styled.div`
   font-size: 25px;
 `;
-
+// #C3D2BC;
 const StyledModal = styled.div`
-  background: white;
-  width: 300px;
+  background: #F4ECE6;
+  border: 2px solid #749551;
+  width: 350px;
   border-radius: 15px;
   padding: 10px;
   margin-top: -40rem;
+  position: fixed;
 `;
 const StyledModalOverlay = styled.div`
   position: absolute;

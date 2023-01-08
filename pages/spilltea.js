@@ -3,7 +3,14 @@ import Layout from "../components/layout";
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 import Script from 'next/script';
-import Modal from '../components/modal'
+import Modal from '../components/modal';
+import Button from '../components/button';
+import {Lexend} from '@next/font/google';
+
+const lexend = Lexend({
+   subsets: ['latin'],
+  display: "fallback",
+})
 
 
 const survey = {
@@ -27,8 +34,11 @@ export default function Spill() {
     <iframe style = {survey} data-tally-src="https://tally.so/embed/mVpqjN?hideTitle=1&transparentBackground=1&dynamicHeight=1" width="100%" height="542" frameborder="0" marginheight="0" marginwidth="0" title="Spill the real tea with the help of AI. "></iframe>        
     
     </div> 
+    <div className={lexend.className}>
       <Modal onClose={() => setShowModal(false)} show={showModal}> This feature is currently invite-only. Please fill out this form to get early access.
+        <Button buttonText= "get on waitlist" link = '/about'/> 
     </Modal>
+    </div>
     
 
     </>

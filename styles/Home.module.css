@@ -159,7 +159,7 @@ text-align: center;
     }
   .navItem {
     display: flex;
-    padding: 1rem;
+    padding: 1.3rem;
     margin-left: 2rem;
     color: #000000;
     font-size: 1.5rem;
@@ -192,6 +192,7 @@ text-align: center;
 
   .button {
     width: 40%;
+    
   }
 
   .profileContainer {
