@@ -34,11 +34,11 @@ export default function Spill() {
     <iframe style = {survey} data-tally-src="https://tally.so/embed/mVpqjN?hideTitle=1&transparentBackground=1&dynamicHeight=1" width="100%" height="542" frameborder="0" marginheight="0" marginwidth="0" title="Spill the real tea with the help of AI. "></iframe>        
     
     </div> 
-    <div className={lexend.className}>
-      <Modal onClose={() => setShowModal(false)} show={showModal}> This feature is currently invite-only. Please fill out this form to get early access.
-        <Button buttonText= "get on waitlist" link = '/about'/> 
+    
+      <Modal onClose={() => setShowModal(false)} show={showModal}> This feature is currently invite-only. Please book a 15 min call with our team to get early access.
+        <Button buttonText= "get early access" link='https://calendly.com/quest-team'/>
     </Modal>
-    </div>
+
     
 
     </>

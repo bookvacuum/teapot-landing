@@ -6,12 +6,6 @@ self.__FONT_LOADER_MANIFEST={
     ],
     "/": [
       "static/media/ef42359082410918.p.woff2"
-    ],
-    "/spilltea": [
-      "static/media/ef42359082410918.p.woff2"
-    ],
-    "/about": [
-      "static/media/ef42359082410918.p.woff2"
     ]
   },
   "app": {}

@@ -3,6 +3,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/spilltea": "pages/spilltea.js",
-  "/about": "pages/about.js",
   "/": "pages/index.js"
 }
