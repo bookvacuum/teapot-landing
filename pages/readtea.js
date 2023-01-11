@@ -10,6 +10,7 @@ export default function Spill() {
     <div className={styles.feed}>
     <RecipeReviewCard/>
     <RecipeReviewCard/>
+     <RecipeReviewCard/>
       </div> 
       
 

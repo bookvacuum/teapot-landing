@@ -7,7 +7,8 @@
 .feed {
   background-image: url("/Leafym.svg");
   background-size: cover;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   row-gap: 15px;
 }
 
