@@ -32,7 +32,7 @@ export default function RecipeReviewCard({title, date, content}) {
         // border: "2px solid #749551",
       }} >
       <CardHeader
-        avatar={<Avatar alt="who?" src="..public/angrycat.png" />}
+        avatar={<Avatar alt="green?" src="..public/angrycat.png" />}
         action={
           <ButtonGroup
             sx={{
