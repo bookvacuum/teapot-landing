@@ -25,10 +25,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+    "/about": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/about.js"
+    ],
     "/readtea": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/readtea.js"
+    ],
+    "/spilltea": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/spilltea.js"
     ]
   },
   "ampFirstPages": []
