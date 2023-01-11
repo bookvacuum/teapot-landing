@@ -1,7 +1,14 @@
 .container {
   background-image: url("/Leafym.svg");
   background-size: cover;
-  height: 80rem;
+  
+}
+
+.feed {
+  background-image: url("/Leafym.svg");
+  background-size: cover;
+  display: grid;
+  row-gap: 15px;
 }
 
 .navItem {
@@ -47,7 +54,6 @@
 .mobileNavBarLink:active {
   text-decoration: wavy underline #2C1D02;
 }
-  
 
 .content {
   margin-top: 0;
@@ -150,7 +156,7 @@ text-align: center;
 }
 
 
- @media (min-width: 760px) {
+ @media (min-width: 780px) {
   .container {
     width: 100%;
     background-image: url("/Leafy.svg");
@@ -192,7 +198,7 @@ text-align: center;
 
   .button {
     width: 40%;
-    
+
   }
 
   .profileContainer {
@@ -204,6 +210,8 @@ text-align: center;
   .profile:hover {
     transform: translateY(-25px);
   }
+
+ 
  }
 
 

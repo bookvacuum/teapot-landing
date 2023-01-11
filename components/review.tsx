@@ -14,7 +14,8 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import { positions } from "@mui/system";
+import { ButtonGroup } from "@mui/material";
+import { BlockList } from "net";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -31,7 +32,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }));
 
-export default function RecipeReviewCard() {
+export default function RecipeReviewCard(props) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -41,41 +42,66 @@ export default function RecipeReviewCard() {
   return (
     <Card
       sx={{
-        maxWidth: 1000,
+        maxWidth: 900,
         p: 1,
         m: 3,
-        position: "absolute",
         borderRadius: "16px",
+        border: "2px solid #749551",
       }}
     >
       <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
-          </Avatar>
-        }
+        avatar={<Avatar alt="who?" src="..public/angrycat.png" />}
         action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
+          <ButtonGroup
+            sx={{
+              display: {
+                xs: "block",
+                sm: "flex", // theme.breakpoints.up('sm')
+                md: "flex", // theme.breakpoints.up('md')
+                lg: "flex", // theme.breakpoints.up('lg')
+                xl: "flex",
+              },
+            }}
+          >
+            <IconButton aria-label="add to favorites">
+              <FavoriteIcon />
+            </IconButton>
+            <IconButton aria-label="share">
+              <ShareIcon />
+            </IconButton>
+            <IconButton aria-label="settings">
+              <MoreVertIcon />
+            </IconButton>
+          </ButtonGroup>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title={"From a HarperCollins Editorial Assistant"}
+        subheader={"September 14, 2016"}
       />
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like.
+        <Typography paragraph>
+          I worked at this company for close to two years. I mainly quit because
+          of two reasons. First, I was making 45K as an editorial assistant. We
+          are told that in publishing this is standard, and yet with [ ] offices
+          being in New York and San Francisco, it is tough to survive in these
+          cities with that income. Meanwhile, editorial assistants have to
+          juggle so much–given a book, they are assigned duties in editing,
+          marketing, copyediting, design, financial projection analysis…even
+          acting as a personal secretary for your editors at times (I cannot
+          count the times I had to book stuff for my managers and log in their
+          company card expenses..).
+        </Typography>
+        <Typography paragraph>
+          By the end of my time at this company, they were dangling the
+          possibility of a promotion (a meager 5K increase) to me and other
+          editorial assistants, but the promotion kept getting delayed, and I
+          ultimately felt like this is not the right job for my financial
+          stability and career growth. There is a running joke among the
+          employees that in order to work at HarperCollins long enough to make
+          it to senior editor positions, you’ll need a spouse who actually makes
+          a decent income.
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
+      <CardActions disableSpacing={true}>
         <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}
@@ -87,28 +113,6 @@ export default function RecipeReviewCard() {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>
-            I worked at this company for close to two years. I mainly quit
-            because of two reasons. First, I was making 45K as an editorial
-            assistant. We are told that in publishing this is standard, and yet
-            with [ ] offices being in New York and San Francisco, it is tough to
-            survive in these cities with that income. Meanwhile, editorial
-            assistants have to juggle so much–given a book, they are assigned
-            duties in editing, marketing, copyediting, design, financial
-            projection analysis…even acting as a personal secretary for your
-            editors at times (I cannot count the times I had to book stuff for
-            my managers and log in their company card expenses..).
-          </Typography>
-          <Typography paragraph>
-            By the end of my time at this company, they were dangling the
-            possibility of a promotion (a meager 5K increase) to me and other
-            editorial assistants, but the promotion kept getting delayed, and I
-            ultimately felt like this is not the right job for my financial
-            stability and career growth. There is a running joke among the
-            employees that in order to work at HarperCollins long enough to make
-            it to senior editor positions, you’ll need a spouse who actually
-            makes a decent income.
-          </Typography>
           <Typography paragraph>
             Second, the managerial system works well in some cases but in my
             case, I worked under a manager who was a very privileged white
