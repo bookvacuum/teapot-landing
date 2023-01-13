@@ -115,7 +115,7 @@
 .profile {
   transition: all 0.3s;
   justify-content: center;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 
@@ -151,6 +151,9 @@ padding-bottom: 3rem;
   transition: all 0.3s;
 }
 
+ .profile:hover {
+   transform: translateY(-25px);
+ }
 .profile .name::before {
   content: "";
   position: absolute;
@@ -224,11 +227,12 @@ padding-bottom: 3rem;
     gap: 5rem;
     padding-bottom: 1rem;
   }
-  .profile:hover {
-    transform: translateY(-25px);
+ 
+
+  .profile {
+    padding-top: 1rem;
   }
 
- 
  }
 
 
