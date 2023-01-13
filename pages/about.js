@@ -7,6 +7,7 @@ import Link from "next/link";
 import sunwoo from"../public/sunwoo.jpeg";
 import sunho from"../public/sunho.png";
 import michey from"../public/michey.png";
+import cat from '../public/cat.png';
 
 
 const lexend = Lexend({
@@ -19,6 +20,12 @@ textAlign: "center",
 };
 
 
+const image = {
+paddingBottom: '0.4rem',
+width: '8rem',
+height: 'auto',
+};
+
 
 export default function Spill() {
   
@@ -26,6 +33,7 @@ export default function Spill() {
     <>
     <div className={styles.container}>
       <div className={styles.aboutContent}>
+      <Image src={cat} style ={image} alt="Picture of cat"/>
         {/* <Image style = {image} src={teapot} alt="Picture of teapot"/> */}
        <h1 className={styles.header}>our mission</h1>
           <p className={`${styles.paragraph} ${lexend.className}`}>

@@ -50,7 +50,7 @@ export default function Home() {
         <div className={styles.second}>
           <h1 className={styles.header}>ready to spill the tea?</h1>
           <p className={`${styles.paragraph} ${lexend.className}`}>Join our open beta for Teapot by submitting a review of an employer you worked with, interned at, or even applied to. Thank you for being a part of our community! 💘</p>
-          <Button buttonText= "go spill" link='https://calendly.com/quest-team'/> 
+          <Button buttonText= "get early access" link='https://calendly.com/quest-team'/> 
         </div>
       </div> 
 

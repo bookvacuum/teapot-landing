@@ -14,7 +14,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import { ButtonGroup } from "@mui/material";
+import { autocompleteClasses, ButtonGroup } from "@mui/material";
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
 
@@ -27,6 +27,8 @@ export default function RecipeReviewCard({title, date, content}) {
         height: 400,
         p: 1,
         m: 3,
+        marginLeft: "auto",
+        marginRight: "auto",        
         borderRadius: "16px",
         overflow: "scroll",
         // border: "2px solid #749551",
