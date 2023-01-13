@@ -58,13 +58,23 @@
 
 .content {
   margin-top: 0;
-  padding-top: 2rem;
+  padding-top: 3rem;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   width: 80%;
   padding-bottom: 4rem;
+}
+
+.aboutContent {
+  margin-top: 0;
+  padding-top: 2rem;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 80%;
 }
 
 .button {
@@ -111,6 +121,7 @@
 
 .profileContainer {
 text-align: center;
+padding-bottom: 3rem;
 }
 
 
@@ -189,6 +200,10 @@ text-align: center;
     padding-top: 5rem;
     width: 50%;
   }
+  .aboutContent {
+    padding-top: 5rem;
+    width: 50%;
+  }
 
   .paragraph {
     font-size: 1.3rem;
@@ -204,10 +219,10 @@ text-align: center;
   }
 
   .profileContainer {
-    padding-top: 1.5rem;
     display: flex;
     justify-content: center;
     gap: 5rem;
+    padding-bottom: 1rem;
   }
   .profile:hover {
     transform: translateY(-25px);

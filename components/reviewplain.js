@@ -43,6 +43,7 @@ export default function RecipeReviewCard({title, date, content}) {
                 lg: "flex", // theme.breakpoints.up('lg')
                 xl: "flex",
               },
+              
             }}
           >
             <IconButton aria-label="add to favorites">

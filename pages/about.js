@@ -5,7 +5,7 @@ import Button from "../components/button";
 import {Space_Grotesk, Lexend, Autour_One} from '@next/font/google';
 import Link from "next/link";
 import sunwoo from"../public/sunwoo.jpeg";
-import sunho from"../public/sunho.jpeg";
+import sunho from"../public/sunho.png";
 import michey from"../public/michey.png";
 
 
@@ -25,7 +25,7 @@ export default function Spill() {
   return (
     <>
     <div className={styles.container}>
-      <div className={styles.content}>
+      <div className={styles.aboutContent}>
         {/* <Image style = {image} src={teapot} alt="Picture of teapot"/> */}
        <h1 className={styles.header}>our mission</h1>
           <p className={`${styles.paragraph} ${lexend.className}`}>
@@ -39,10 +39,13 @@ We build for Amy who went to work during a level 5 storm ⛈️ </p>
                  <h1 className={styles.header}>team</h1>
                   <p className={`${styles.paragraph} ${lexend.className}`}>We are built by a small team of friends in San Francisco, CA. 
                   We strive to be the dream workplace for each and everyone of our team members.
-                  Teapot is our first test run of <strong> <Link href="https://ourquest.xyz">Quest Protocol</Link></strong>, a complete data collection, analytics, and reward system for the internet. Check out the <strong><Link href="https://ourquest.xyz">docs</Link></strong>.
+                  Teapot is our first test run of <strong> <Link href="https://ourquest.xyz">Quest Protocol</Link></strong>, a complete data collection, analytics, and reward system for the internet. Check out the <strong><Link href="https://quest-4.gitbook.io/quest-sdk/">docs</Link></strong>.
                   </p>
         </div>
 
+
+      </div> 
+       
 
  <div className={styles.profileContainer}>
         <div className={styles.profile}>
@@ -58,8 +61,6 @@ We build for Amy who went to work during a level 5 storm ⛈️ </p>
            <Image src={sunho} alt="Picture of sw"  width={140} height={140} /> 
             <span className={styles.name}>SH is our Director of Meows</span>
         </div>
-      </div> 
-       
       </div> 
 
 
