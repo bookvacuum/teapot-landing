@@ -26,9 +26,21 @@ export default function RecipeReviewCard({title, date, content}) {
         maxWidth: 900,
         height: 400,
         p: 1,
-        m: 3,
-        marginLeft: "auto",
-        marginRight: "auto",        
+         m: 3,
+        marginLeft: {
+          xs: 2,
+          sm: "auto", // theme.breakpoints.up('sm')
+          md: "auto", // theme.breakpoints.up('md')
+          lg: "auto", // theme.breakpoints.up('lg')
+          xl: "auto",
+        },
+        marginRight: {
+          xs: 2,
+          sm: "auto", // theme.breakpoints.up('sm')
+          md: "auto", // theme.breakpoints.up('md')
+          lg: "auto", // theme.breakpoints.up('lg')
+          xl: "auto",
+        },
         borderRadius: "16px",
         overflow: "scroll",
         // border: "2px solid #749551",
