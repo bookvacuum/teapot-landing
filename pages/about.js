@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
-import Image from 'Next/image';
+import Image from 'next/image';
 import Button from "../components/button";
 import {Space_Grotesk, Lexend, Autour_One} from '@next/font/google';
 import Link from "next/link";

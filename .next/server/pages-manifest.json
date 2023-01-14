@@ -1,12 +1,9 @@
 {
-  "/_document": "pages/_document.js",
   "/_app": "pages/_app.js",
-  "/about": "pages/about.html",
-  "/api/hello": "pages/api/hello.js",
-  "/api/staticdata": "pages/api/staticdata.js",
-  "/": "pages/index.html",
-  "/spilltea": "pages/spilltea.html",
   "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
   "/readtea": "pages/readtea.js",
-  "/404": "pages/404.html"
+  "/about": "pages/about.js",
+  "/spilltea": "pages/spilltea.js",
+  "/": "pages/index.js"
 }

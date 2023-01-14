@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import {Press_Start_2P} from '@next/font/google';
 import styles from "../styles/Home.module.css";
-import Image from 'Next/image';
+import Image from 'next/image';
 import teapot from '../public/teapotlg.png'
 import teapotBeta from '../public/teapotBeta.png'
 import {Space_Grotesk} from '@next/font/google';

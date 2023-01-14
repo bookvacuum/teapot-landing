@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 import {Space_Grotesk, Lexend, Autour_One} from '@next/font/google';
-import Image from 'Next/image';
+import Image from 'next/image';
 import teapot from '../public/browntp.png';
 import Button from "../components/button";
 
