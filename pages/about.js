@@ -4,9 +4,9 @@ import Image from 'Next/image';
 import Button from "../components/button";
 import {Space_Grotesk, Lexend, Autour_One} from '@next/font/google';
 import Link from "next/link";
-import sunwoo from"../public/sunwoo.jpeg";
-import sunho from"../public/sunho.png";
-import michey from"../public/michey.png";
+import cat1 from"../public/readingCat.jpeg";
+import cat2 from"../public/veggieCat.png";
+import cat3 from"../public/catBoss.png";
 import cat from '../public/cat.png';
 
 
@@ -57,16 +57,16 @@ We build for Amy who went to work during a level 5 storm ⛈️ </p>
 
  <div className={styles.profileContainer}>
         <div className={styles.profile}>
-          <Image src={sunwoo} alt="Picture of sw"  width={140} 
+          <Image src={cat1} alt="Picture of sw"  width={140} 
           height={140} /> 
           <span className={styles.name}>S is our Chief Purr Officer</span>
         </div>
         <div className={styles.profile}>
-          <Image src={michey} alt="teapot logo" width={140} height={140}/>
+          <Image src={cat3} alt="teapot logo" width={140} height={140}/>
           <span className={styles.name}>M is our Chief Eating Officer </span>
         </div>
         <div className={styles.profile}>
-           <Image src={sunho} alt="Picture of sw"  width={140} height={140} /> 
+           <Image src={cat2} alt="Picture of sw"  width={140} height={140} /> 
             <span className={styles.name}>SH is our Director of Meows</span>
         </div>
       </div> 

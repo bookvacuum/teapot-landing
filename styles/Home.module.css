@@ -4,6 +4,15 @@
   
 }
 
+.disclaimer{
+margin-top: 2rem;
+background-color: #EEFFEA;
+margin-left: 10%;
+margin-right: 10%;
+padding-right: 1rem;
+padding-left: 1rem;
+border-radius: 10px;
+}
 
 .feed {
   background-image: url("/Leafym.svg");
