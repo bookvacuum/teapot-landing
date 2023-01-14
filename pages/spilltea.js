@@ -38,9 +38,6 @@ export default function Spill() {
       <Modal onClose={() => setShowModal(false)} show={showModal}> This feature is currently invite-only. Please book a 15 min call with our team to get early access.
         <Button buttonText= "get early access" link='https://calendly.com/quest-team'/>
     </Modal>
-
-    
-
     </>
 );
 }

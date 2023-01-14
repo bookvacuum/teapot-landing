@@ -15,10 +15,11 @@ import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { autocompleteClasses, ButtonGroup } from "@mui/material";
+import { atob } from "buffer";
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
 
-export default function RecipeReviewCard({title, date, content}) {
+export default function RecipeReviewCard({title, date, content, company, role}) {
 
   return (
 <Card
@@ -71,7 +72,7 @@ export default function RecipeReviewCard({title, date, content}) {
             </IconButton>
           </ButtonGroup>
         }
-        title={title}
+        title= {`${role} at ${company}`}
         subheader={date}
       />
       <CardContent>
