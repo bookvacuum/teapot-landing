@@ -31,7 +31,7 @@ export default function Spill() {
   
   return (
     <>
-    <div className={styles.container}>
+<div className={styles.container}>
       <div className={styles.aboutContent}>
       <Image src={cat} style ={image} alt="Picture of cat"/>
         {/* <Image style = {image} src={teapot} alt="Picture of teapot"/> */}
@@ -71,9 +71,7 @@ We build for Amy who went to work during a level 5 storm ⛈️ </p>
         </div>
       </div> 
 
-
-
-    </div> 
+</div>
 
     </>
   );

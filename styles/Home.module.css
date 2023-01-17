@@ -86,6 +86,7 @@ border-radius: 10px;
   margin-right: auto;
   text-align: center;
   width: 80%;
+
 }
 
 .button {
@@ -131,8 +132,10 @@ border-radius: 10px;
 
 
 .profileContainer {
+
 text-align: center;
 padding-bottom: 3rem;
+
 }
 
 
@@ -215,7 +218,7 @@ padding-bottom: 3rem;
     width: 50%;
   }
   .aboutContent {
-    width: 50%;
+    min-width: 50%;
     padding-top: 4rem;
   }
 
