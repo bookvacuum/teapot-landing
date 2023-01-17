@@ -26,7 +26,7 @@ export default function Spill() {
     <>
     <Head>
         <title>send love to the homies who need it</title>
-        <meta name="description" content="quit now, bro" />
+        <meta name="description" content="time to spill tea" />
         <link rel="icon" href="/favicon.ico" />
         <script async src="https://tally.so/widgets/embed.js"/> 
     </Head>
