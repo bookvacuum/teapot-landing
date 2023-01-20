@@ -4,7 +4,6 @@ import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
-
 import Avatar from "@mui/material/Avatar";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
@@ -16,6 +15,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { autocompleteClasses, ButtonGroup } from "@mui/material";
 import { atob } from "buffer";
 import { useRouter } from "next/router";    
+import Button from '@mui/material/Button';
 
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
@@ -23,12 +23,11 @@ import { useRouter } from "next/router";
 export default function RecipeReviewCard({title, id, createdAt, content, company, role}) {
   const router = useRouter()
   return (
-<Card onClick={() => router.push(`/reviews/${id}`)}
+<Card 
       sx={{
         maxWidth: 900,
-        height: 400,
+        height: 300,
         p: 1,
-         m: 3,
         marginLeft: {
           xs: 2,
           sm: "auto", // theme.breakpoints.up('sm')
@@ -44,9 +43,10 @@ export default function RecipeReviewCard({title, id, createdAt, content, company
           xl: "auto",
         },
         borderRadius: "16px",
-        overflow: "scroll",
+        overflow: "hidden",
         // border: "2px solid #749551",
       }} >
+
       <CardHeader
         avatar={<Avatar alt="green?" src="..public/angrycat.png" />}
         action={
@@ -83,7 +83,9 @@ export default function RecipeReviewCard({title, id, createdAt, content, company
           {paragraph}
         </Typography>
         )}
+          
       </CardContent>
+     <Button onClick={() => router.push(`/reviews/${id}`)} ><ExpandMoreIcon sx={{textAlign: 'right'}}/></Button> 
     </Card>
   )
 }

@@ -7,16 +7,22 @@ const prisma = new PrismaClient();
 const ReviewPage = (review = null) => {
   return (
     <div className={styles.container}>
-    <h1 className={styles.header}>our mission</h1>
+        <div className={styles.content}>
+            <div className={styles.post}>
+    <h1 className={styles.header}>{review?.title ?? 0}</h1>
                 <span>{review?.company ?? 0} company </span>
 
                 <span>{review?.role ?? 0} </span>
            
                 <span>{review?.createdAt ?? 0}</span>
-
-        
     
-        <p className="mt-8 text-lg">{review?.content ?? ''}</p>
+         {review?.content.map(paragraph => 
+        <p key={paragraph}>
+          {paragraph}
+        </p>
+        )}
+    </div>
+    </div>
     </div>
   );
 };
