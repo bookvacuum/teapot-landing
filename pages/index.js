@@ -8,6 +8,9 @@ import teapot from '../public/browntp.png';
 import Button from "../components/button";
 import RecipeReviewCard from "../components/reviewplain";
 import { reviews } from '../data';
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
 
 // If loading a variable font, you don't need to specify the font weight
 const space = Space_Grotesk({
@@ -28,14 +31,24 @@ height: 'auto',
 
 
 
-export const getStaticProps = async () =>  {
-    return {
-        props: {
-            reviewslist: reviews,
-        },
-    }
-}
+// export const getStaticProps = async () =>  {
+//     return {
+//         props: {
+//             reviewslist: reviews,
+//         },
+//     }
+// }
 
+export async function getServerSideProps() {
+  // Get all homes
+  const reviews = await prisma.review.findMany();
+  // Pass the data to the Home page
+  return {
+    props: {
+      reviewslist: JSON.parse(JSON.stringify(reviews)),
+    },
+  };
+}
 
 export default function Home({reviewslist}) {
   return (
