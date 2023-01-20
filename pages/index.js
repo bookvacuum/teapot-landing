@@ -12,7 +12,9 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-// If loading a variable font, you don't need to specify the font weight
+
+
+
 const space = Space_Grotesk({
    subsets: ['latin'],
    display: "fallback",
@@ -70,13 +72,15 @@ export default function Home({reviewslist}) {
        <div className={styles.feed}>
         <div className={styles.disclaimer}>
         <p className={`${styles.paragraph}`}> <strong>Disclaimer:</strong> AI is undeterminstic and so are the reviews. Some details may be intentionally left to be factually inaccurate in order to preserve the privacy of the reviewer. The gist of the story and the sentiment the user wants to convey are preserved, however. </p>
-        </div>
+       
+
+    </div>
+
+     </div>
         {reviewslist.map(reviewslist => (  
             <RecipeReviewCard key={reviewslist.title} {...reviewslist} />
         ))}
     </div> 
-
-    </div>
     </>
   );
 }
