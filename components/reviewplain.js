@@ -4,8 +4,7 @@ import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
-import Collapse from "@mui/material/Collapse";
+
 import Avatar from "@mui/material/Avatar";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
@@ -16,13 +15,15 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { autocompleteClasses, ButtonGroup } from "@mui/material";
 import { atob } from "buffer";
+import { useRouter } from "next/router";    
+
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
 
-export default function RecipeReviewCard({title, createdAt, content, company, role}) {
-
+export default function RecipeReviewCard({title, id, createdAt, content, company, role}) {
+  const router = useRouter()
   return (
-<Card
+<Card onClick={() => router.push(`/reviews/${id}`)}
       sx={{
         maxWidth: 900,
         height: 400,

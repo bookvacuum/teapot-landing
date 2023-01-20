@@ -1,35 +1,23 @@
 import { PrismaClient } from '@prisma/client';
+import styles from '../../styles/Home.module.css';
 
 // Instantiate Prisma Client
 const prisma = new PrismaClient();
 
 const ReviewPage = (review = null) => {
   return (
+    <div className={styles.container}>
+    <h1 className={styles.header}>our mission</h1>
+                <span>{review?.company ?? 0} company </span>
 
-      <div className="max-w-screen-lg mx-auto">
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:space-x-4 space-y-4">
-          <div>
-            <h1 className="text-2xl font-semibold truncate">
-              {review?.title ?? ''}
-            </h1>
-            <ol className="inline-flex items-center space-x-1 text-gray-500">
-              <li>
-                <span>{review?.company ?? 0} guests</span>
-                <span aria-hidden="true"> · </span>
-              </li>
-              <li>
-                <span>{review?.role ?? 0} beds</span>
-                <span aria-hidden="true"> · </span>
-              </li>
-              <li>
-                <span>{review?.createdAt ?? 0} baths</span>
-              </li>
-            </ol>
-          </div>
-        </div>
+                <span>{review?.role ?? 0} </span>
+           
+                <span>{review?.createdAt ?? 0}</span>
 
+        
+    
         <p className="mt-8 text-lg">{review?.content ?? ''}</p>
-      </div>
+    </div>
   );
 };
 
