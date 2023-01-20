@@ -1,8 +1,11 @@
-import Layout from '@/components/Layout';
+import { PrismaClient } from '@prisma/client';
 
-const ListedHome = (review = null) => {
+// Instantiate Prisma Client
+const prisma = new PrismaClient();
+
+const ReviewPage = (review = null) => {
   return (
-    <Layout>
+
       <div className="max-w-screen-lg mx-auto">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:space-x-4 space-y-4">
           <div>
@@ -27,8 +30,42 @@ const ListedHome = (review = null) => {
 
         <p className="mt-8 text-lg">{review?.content ?? ''}</p>
       </div>
-    </Layout>
   );
 };
 
-export default ListedHome;
+export default ReviewPage;
+
+export async function getStaticPaths() {
+  // Get all the homes IDs from the database
+  const reviews = await prisma.review.findMany({
+    select: { id: true },
+  });
+
+  return {
+    paths: reviews.map(review => ({
+      params: { id: review.id },
+    })),
+    fallback: false,
+  };
+}                               
+
+
+export async function getStaticProps({ params }) {
+  // Get the current home from the database
+  const review = await prisma.review.findUnique({
+    where: { id: params.id },
+  });
+
+  if (review) {
+    return {
+      props: JSON.parse(JSON.stringify(review)),
+    };
+  }
+
+  return {
+    redirect: {
+      destination: '/',
+      permanent: false,
+    },
+  };
+}
