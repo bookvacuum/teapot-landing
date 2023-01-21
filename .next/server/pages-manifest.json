@@ -2,6 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/reviews/[id]": "pages/reviews/[id].js"
+  "/about": "pages/about.js",
+  "/spilltea": "pages/spilltea.js",
+  "/readtea": "pages/readtea.js",
+  "/": "pages/index.js"
 }
