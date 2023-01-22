@@ -3,12 +3,19 @@ import Link from "next/link";
 import {Press_Start_2P} from '@next/font/google';
 import styles from "../styles/Home.module.css";
 import Image from 'next/image';
+import AuthModal from './AuthModal';
 import teapot from '../public/teapotlg.png'
 import teapotBeta from '../public/teapotBeta.png'
 import {Space_Grotesk} from '@next/font/google';
 import menu from '../public/menu.png';
 import Head from 'next/head'
 import Footer from "../components/footer";
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+import { useSession, signOut } from 'next-auth/react';
+import ReviewsIcon from '@mui/icons-material/Reviews';
+import BookmarkIcon from '@mui/icons-material/Bookmark';
+import LogoutIcon from '@mui/icons-material/Logout';
+import Button from "../components/button";
 
 // If loading a variable font, you don't need to specify the font weight
 const space = Space_Grotesk({
@@ -23,9 +30,40 @@ const press = Press_Start_2P({
    display: "fallback",
   })
 
+  
+const menuItems = [
+  {
+    label: 'Submit a review',
+    icon: AddCircleIcon,
+    href: '/spilltea',
+  },
+  {
+    label: 'My homes',
+    icon: ReviewsIcon,
+    href: '/homes',
+  },
+  {
+    label: 'Favorites',
+    icon: BookmarkIcon,
+    href: '/favorites',
+  },
+  {
+    label: 'Logout',
+    icon: LogoutIcon,
+    onClick: signOut,
+  },
+];
 
 
 const Layout = (props) => {
+  const { data: session, status } = useSession();
+  const user = session?.user;
+  const isLoadingUser = status === 'loading';
+
+   const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => setShowModal(true);
+  const closeModal = () => setShowModal(false);
 
   const [mobileNavActive, setNavActive] = useState(null);
 
@@ -52,6 +90,9 @@ const Layout = (props) => {
       <Link href="/readtea" className= {styles.navItem}>
         read the tea
       </Link>
+       <button onClick={openModal}>log in</button>
+      <AuthModal show={showModal} onClose={closeModal} />
+
        <Image
           onClick={() => setNavActive(!mobileNavActive)}
           className={styles.mobileNavBar}
