@@ -32,7 +32,7 @@ const Confirm = ({ show = false, email = '' }) => (
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <div className="fixed inset-0 bg-white" />
+        <div className={styles.body} />
       </Transition.Child>
 
       <Transition.Child
@@ -47,7 +47,7 @@ const Confirm = ({ show = false, email = '' }) => (
         <div className={styles.one}>
           <div className={styles.two}>
             <h3 className={styles.three}>
-              <div className="flex flex-col justify-center items-center space-y-4">
+              <div className={styles.four}>
                 <EmailIcon/>
               </div>
               <p className="text-2xl font-semibold mt-2">Confirm your email</p>
