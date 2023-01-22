@@ -45,8 +45,8 @@ const Confirm = ({ show = false, email = '' }) => (
         leaveTo="opacity-0 scale-95"
       >
         <div className={styles.one}>
-          <div className="overflow-hidden transition-all transform">
-            <h3 className="text-center text-lg font-medium leading-6">
+          <div className={styles.two}>
+            <h3 className={styles.three}>
               <div className="flex flex-col justify-center items-center space-y-4">
                 <EmailIcon/>
               </div>
