@@ -12,6 +12,7 @@ import styles from '../styles/auth.module.css';
 import CloseIcon from '@mui/icons-material/Close';
 
 import EmailIcon from '@mui/icons-material/Email';
+import { style } from '@mui/system';
 
 const SignInSchema = Yup.object().shape({
   email: Yup.string()
@@ -23,18 +24,6 @@ const SignInSchema = Yup.object().shape({
 const Confirm = ({ show = false, email = '' }) => (
   <Transition appear show={show} as={Fragment}>
     <div className={styles.outer}>
-      <Transition.Child
-        as={Fragment}
-        enter="ease-out duration-300"
-        enterFrom="opacity-0"
-        enterTo="opacity-100"
-        leave="ease-in duration-200"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0"
-      >
-        <div className={styles.body} />
-      </Transition.Child>
-
       <Transition.Child
         as={Fragment}
         enter="ease-out duration-300"
@@ -53,7 +42,7 @@ const Confirm = ({ show = false, email = '' }) => (
               <p className="text-2xl font-semibold mt-2">Confirm your email</p>
             </h3>
 
-            <p className="text-lg text-center mt-4">
+            <p className={styles.notice}>
               We emailed a magic link to <strong>{email ?? ''}</strong>.
               <br />
               Check your inbox and click the link in the email to login or sign
@@ -127,17 +116,18 @@ const AuthModal = ({ show = false, onClose = () => null }) => {
     toast.dismiss();
   }, []);
 
+
   return (
     <Transition appear show={show} as={Fragment}>
       <Dialog
         as="div"
-        className="fixed inset-0 z-50 overflow-y-auto"
+        className={styles.modalFirst}
         onClose={closeModal}
       >
-        <Dialog.Overlay className="fixed inset-0 bg-black opacity-75" />
+        <Dialog.Overlay className={styles.dialogOverlay} />
 
-        <div className="min-h-screen text-center">
-          <Transition.Child
+        <div className={styles.center}>
+          {/* <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
             enterFrom="opacity-0"
@@ -145,19 +135,15 @@ const AuthModal = ({ show = false, onClose = () => null }) => {
             leave="ease-in duration-200"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
-          >
-            <Dialog.Overlay className="fixed inset-0" />
-          </Transition.Child>
+          > */}
+            <Dialog.Overlay className={styles.dialogOverlay} />
+          {/* </Transition.Child> */}
 
           {/* This element is to trick the browser into centering the modal contents. */}
-          <span
-            className="inline-block h-screen align-middle"
-            aria-hidden="true"
-          >
+          <span className={styles.modal} aria-hidden="true">
             &#8203;
           </span>
-
-          <Transition.Child
+          {/* <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
             enterFrom="opacity-0 scale-95"
@@ -165,35 +151,28 @@ const AuthModal = ({ show = false, onClose = () => null }) => {
             leave="ease-in duration-200"
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
-          >
-            <div className="inline-block w-full my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl sm:rounded-md max-w-md relative">
+          > */}
+            <div className={styles.modalInner}>
               {/* Close icon */}
               <button
                 onClick={closeModal}
-                className="absolute top-2 right-2 shrink-0 p-1 rounded-md hover:bg-gray-100 transition focus:outline-none"
+                className={styles.closeButton}
               >
                 <CloseIcon/>
               </button>
 
-              <div className="py-12">
-                <div className="px-4 sm:px-12">
-                  <div className="flex justify-center">
-                    <Link href="/">
-                      Teapot Fuck
-                    </Link>
-                  </div>
-
+              <div className={styles.modalContent}>
+                <div className={styles.modalContentIn}>
                   <Dialog.Title
                     as="h3"
-                    className="mt-6 font-bold text-lg sm:text-2xl text-center"
+                    className={styles.header}
                   >
                     {showSignIn ? 'Welcome back!' : 'Create your account'}
                   </Dialog.Title>
 
                   {!showSignIn ? (
                     <Dialog.Description className="mt-2 text-gray-500 text-base text-center">
-                      Please create an account to list your homes and bookmark
-                      your favorite ones.
+                      Please create an account to write a review and contact reviewers.
                     </Dialog.Description>
                   ) : null}
 
@@ -202,7 +181,7 @@ const AuthModal = ({ show = false, onClose = () => null }) => {
                     <button
                       disabled={disabled}
                       onClick={() => signInWithGoogle()}
-                      className="h-[46px] w-full mx-auto border rounded-md p-2 flex justify-center items-center space-x-2 text-gray-500 hover:text-gray-600 hover:border-gray-400 hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-gray-400 focus:ring-opacity-25 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:text-gray-500 disabled:hover:bg-transparent disabled:hover:border-gray-200 transition-colors"
+                      className={styles.googleButton}
                     >
                       <Image
                         src="/google.svg"
@@ -225,7 +204,7 @@ const AuthModal = ({ show = false, onClose = () => null }) => {
                           <Input
                             name="email"
                             type="email"
-                            placeholder="elon@spacex.com"
+                            placeholder="jolene@gmail.com"
                             disabled={disabled}
                             spellCheck={false}
                           />
@@ -287,7 +266,7 @@ const AuthModal = ({ show = false, onClose = () => null }) => {
                 </div>
               </div>
             </div>
-          </Transition.Child>
+          {/* </Transition.Child> */}
         </div>
       </Dialog>
     </Transition>
