@@ -15,7 +15,6 @@ import { useSession, signOut } from 'next-auth/react';
 import ReviewsIcon from '@mui/icons-material/Reviews';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import LogoutIcon from '@mui/icons-material/Logout';
-import Button from "../components/button";
 
 // If loading a variable font, you don't need to specify the font weight
 const space = Space_Grotesk({
@@ -38,14 +37,9 @@ const menuItems = [
     href: '/spilltea',
   },
   {
-    label: 'My homes',
+    label: 'Reviews',
     icon: ReviewsIcon,
-    href: '/homes',
-  },
-  {
-    label: 'Favorites',
-    icon: BookmarkIcon,
-    href: '/favorites',
+    href: '/',
   },
   {
     label: 'Logout',
@@ -90,9 +84,23 @@ const Layout = (props) => {
       <Link href="/readtea" className= {styles.navItem}>
         read the tea
       </Link>
-       <button onClick={openModal}>log in</button>
       <AuthModal show={showModal} onClose={closeModal} />
 
+      {isLoadingUser ? (
+                  <div className={styles.loading}>loading...</div>
+                ) : user ? ( 
+                          <div className={styles.userMenu}>
+                             <Image
+                            src={user?.image}
+                            alt={user?.name || 'Avatar'}
+                            width={40}
+                            height={40}/>
+                            <h3> welcome {user?.name}!</h3>
+                            <LogoutIcon onClick={signOut} />
+                            </div>
+                               ) : (
+       <button onClick={openModal}>log in</button>
+                )}
        <Image
           onClick={() => setNavActive(!mobileNavActive)}
           className={styles.mobileNavBar}
