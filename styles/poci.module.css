@@ -1,0 +1,43 @@
+.container {
+    display:flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top:1rem;
+    padding: 2rem;
+}
+.successText {
+    font-size: 1.5rem;
+}
+
+@media(min-width: 1000px) {
+    .container {
+        margin-top: 4rem;
+        margin-bottom: 10rem;
+        margin: 0 auto;
+        width: 750px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.canvas {
+    border-radius: 15px;
+}
+
+.button {
+    margin-top: 1.3rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: max-width;
+    padding: 0.6rem;
+    border: 1px solid black;
+    color: #000000;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+  .button:hover {
+    background-color: #90b290;
+    color: black;
+  }

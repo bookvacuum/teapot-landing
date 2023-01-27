@@ -18,8 +18,6 @@ import { useRouter } from "next/router";
 import Button from '@mui/material/Button';
 
 
-//Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
-
 export default function RecipeReviewCard({title, id, createdAt, content, company, role}) {
   const router = useRouter()
   return (
