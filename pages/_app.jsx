@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import Layout from "../components/layout";
 import localFont from '@next/font/local';
+import { SessionProvider as AuthProvider } from 'next-auth/react';
 
 
 import {Lexend} from '@next/font/google';
@@ -15,15 +16,17 @@ const lexend = Lexend({
 
 
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps: { session, ...pageProps }}) {
   return (
+  <AuthProvider session={session}>
 
   <main className={myFont.className}>
    <Layout>
   <Component {...pageProps} />
    </Layout>
   </main>
- 
+    </AuthProvider>
+
   );
 }
 
