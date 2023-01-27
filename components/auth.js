@@ -7,7 +7,7 @@ import * as Yup from 'yup';
 import { toast } from 'react-hot-toast';
 import { Formik, Form } from 'formik';
 import { Dialog, Transition } from '@headlessui/react';
-import Input from './Input';
+import Input from './input';
 import styles from '../styles/auth.module.css';
 import CloseIcon from '@mui/icons-material/Close';
 
