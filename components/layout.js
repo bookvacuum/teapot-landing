@@ -3,7 +3,7 @@ import Link from "next/link";
 import {Press_Start_2P} from '@next/font/google';
 import styles from "../styles/Home.module.css";
 import Image from 'next/image';
-import AuthModal from '../components/AuthModal';
+import AuthModal from '../components/authmodal';
 import teapot from '../public/teapotlg.png'
 import teapotBeta from '../public/teapotBeta.png'
 import {Space_Grotesk} from '@next/font/google';
