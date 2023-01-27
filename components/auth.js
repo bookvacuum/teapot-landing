@@ -7,7 +7,7 @@ import * as Yup from 'yup';
 import { toast } from 'react-hot-toast';
 import { Formik, Form } from 'formik';
 import { Dialog, Transition } from '@headlessui/react';
-import Input from './Input';
+import Input from './input';
 import styles from '../styles/auth.module.css';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -248,13 +248,12 @@ const AuthModal = ({ show = false, onClose = () => null }) => {
                                   }}
                                   className="underline underline-offset-1 font-semibold text-rose-500 hover:text-rose-600 disabled:hover:text-rose-500 disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                  Log in
-                                </button>
-                                .
-                              </>
+                              Log in
+                                 </button>
+                                 .
+                               </>
                             )}
                           </p>
-
                           <Confirm
                             show={showConfirm}
                             email={values?.email ?? ''}
