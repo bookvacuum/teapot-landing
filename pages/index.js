@@ -61,20 +61,18 @@ export default function Home({reviewslist}) {
         <link rel="icon" href="/favicon.ico" />
     </Head>
     <div className={styles.container}>
-      
-      <div className={styles.content}>
+       <div className={styles.feed}>
+        <div className={styles.disclaimer}>
+        <p className={`${styles.paragraph}`}> <strong>Disclaimer:</strong> AI is undeterminstic and so are the reviews. Some details may be intentionally left to be factually inaccurate in order to preserve the privacy of the reviewer. The gist of the story and the sentiment the user wants to convey are preserved, however. </p>
+    </div>
+      <div className={styles.contentHome}>
         <Image style = {image} src={teapot} alt="Picture of teapot"/>
         <h1 className={styles.header}>what is teapot?</h1>
         <p className={`${styles.paragraph}`}>Teapot is a place you can submit an honest review of your workplace. We provide increased <strong>privacy</strong> and <strong>anonymity</strong> through AI.</p>
       </div> 
     
 
-       <div className={styles.feed}>
-        <div className={styles.disclaimer}>
-        <p className={`${styles.paragraph}`}> <strong>Disclaimer:</strong> AI is undeterminstic and so are the reviews. Some details may be intentionally left to be factually inaccurate in order to preserve the privacy of the reviewer. The gist of the story and the sentiment the user wants to convey are preserved, however. </p>
-       
-
-    </div>
+      
 
      </div>
         {reviewslist.map(reviewslist => (  

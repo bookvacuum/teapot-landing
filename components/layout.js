@@ -3,12 +3,18 @@ import Link from "next/link";
 import {Press_Start_2P} from '@next/font/google';
 import styles from "../styles/Home.module.css";
 import Image from 'next/image';
+import AuthModal from '../components/authmodal';
 import teapot from '../public/teapotlg.png'
 import teapotBeta from '../public/teapotBeta.png'
 import {Space_Grotesk} from '@next/font/google';
 import menu from '../public/menu.png';
 import Head from 'next/head'
 import Footer from "../components/footer";
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+import { useSession, signOut } from 'next-auth/react';
+import ReviewsIcon from '@mui/icons-material/Reviews';
+import BookmarkIcon from '@mui/icons-material/Bookmark';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 // If loading a variable font, you don't need to specify the font weight
 const space = Space_Grotesk({
@@ -23,9 +29,35 @@ const press = Press_Start_2P({
    display: "fallback",
   })
 
+  
+const menuItems = [
+  {
+    label: 'Submit a review',
+    icon: AddCircleIcon,
+    href: '/spilltea',
+  },
+  {
+    label: 'Reviews',
+    icon: ReviewsIcon,
+    href: '/',
+  },
+  {
+    label: 'Logout',
+    icon: LogoutIcon,
+    onClick: signOut,
+  },
+];
 
 
 const Layout = (props) => {
+  const { data: session, status } = useSession();
+  const user = session?.user;
+  const isLoadingUser = status === 'loading';
+
+   const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => setShowModal(true);
+  const closeModal = () => setShowModal(false);
 
   const [mobileNavActive, setNavActive] = useState(null);
 
@@ -52,6 +84,23 @@ const Layout = (props) => {
       <Link href="/readtea" className= {styles.navItem}>
         read the tea
       </Link>
+      <AuthModal show={showModal} onClose={closeModal} />
+
+      {isLoadingUser ? (
+                  <div className={styles.loading}>loading...</div>
+                ) : user ? ( 
+                          <div className={styles.userMenu}>
+                             <Image
+                            src={user?.image}
+                            alt={user?.name || 'Avatar'}
+                            width={40}
+                            height={40}/>
+                            <h3> welcome {user?.name}!</h3>
+                            <LogoutIcon onClick={signOut} />
+                            </div>
+                               ) : (
+       <button onClick={openModal}>log in</button>
+                )}
        <Image
           onClick={() => setNavActive(!mobileNavActive)}
           className={styles.mobileNavBar}
