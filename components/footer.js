@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
      <footer className={styles.footer}> 
-       made with 💖 by Quest Technologies in San Francisco, CA
+       created in San Francisco, CA
      </footer>
   )
 };

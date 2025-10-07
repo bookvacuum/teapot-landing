@@ -2,7 +2,7 @@ import { PrismaClient } from '@prisma/client';
 import styles from '../../styles/Home.module.css';
 
 // Instantiate Prisma Client
-const prisma = new PrismaClient();
+// const prisma = new PrismaClient();
 
 const ReviewPage = (review = null) => {
   return (
@@ -29,37 +29,37 @@ const ReviewPage = (review = null) => {
 
 export default ReviewPage;
 
-export async function getStaticPaths() {
-  // Get all the homes IDs from the database
-  const reviews = await prisma.review.findMany({
-    select: { id: true },
-  });
+// export async function getStaticPaths() {
+//   // Get all the homes IDs from the database
+//   const reviews = await prisma.review.findMany({
+//     select: { id: true },
+//   });
 
-  return {
-    paths: reviews.map(review => ({
-      params: { id: review.id },
-    })),
-    fallback: false,
-  };
-}                               
+//   return {
+//     paths: reviews.map(review => ({
+//       params: { id: review.id },
+//     })),
+//     fallback: false,
+//   };
+// }                               
 
 
-export async function getStaticProps({ params }) {
-  // Get the current home from the database
-  const review = await prisma.review.findUnique({
-    where: { id: params.id },
-  });
+// export async function getStaticProps({ params }) {
+//   // Get the current home from the database
+//   const review = await prisma.review.findUnique({
+//     where: { id: params.id },
+//   });
 
-  if (review) {
-    return {
-      props: JSON.parse(JSON.stringify(review)),
-    };
-  }
+//   if (review) {
+//     return {
+//       props: JSON.parse(JSON.stringify(review)),
+//     };
+//   }
 
-  return {
-    redirect: {
-      destination: '/',
-      permanent: false,
-    },
-  };
-}
+//   return {
+//     redirect: {
+//       destination: '/',
+//       permanent: false,
+//     },
+//   };
+// }
