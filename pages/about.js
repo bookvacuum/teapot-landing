@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
-import Button from '../components/button'
-import Link from 'next/link'
 import cat1 from '../public/readingCat.jpeg'
 import cat2 from '../public/veggieCat.png'
 import cat3 from '../public/catBoss.png'

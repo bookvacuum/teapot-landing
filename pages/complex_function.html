@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complex Plane - Plotly.js</title>
+  <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: sans-serif;
+      margin-top: 30px;
+    }
+    #plot {
+      width: 800px;
+      height: 800px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Complex Plane (-2, -2) to (2, 2)</h2>
+  <div id="plot"></div>
+
+  <script>
+    const numPoints = 250000; // 250k points!
+    const x = new Float32Array(numPoints);
+    const y = new Float32Array(numPoints);
+
+    for (let i = 0; i < numPoints; i++) {
+      const real = -2 + (4 * i / (numPoints - 1));
+      const imag = Math.sin(Math.PI * real); // example function
+      x[i] = real;
+      y[i] = imag;
+    }
+
+    const trace = {
+      x: x,
+      y: y,
+      type: 'scattergl', // GPU acceleration!
+      mode: 'lines',
+      line: { color: 'rgba(0, 150, 255, 0.8)', width: 1 },
+      fill: 'tozeroy',
+      fillcolor: 'rgba(0, 150, 255, 0.2)',
+      name: 'f(z) = sin(πx)',
+    };
+
+    const layout = {
+      title: 'Complex Plane Visualization',
+      xaxis: {
+        title: 'Real Axis',
+        range: [-2, 2],
+        showgrid: true,
+        gridcolor: 'rgba(200,200,200,0.3)',
+        zeroline: true,
+        zerolinecolor: 'black',
+      },
+      yaxis: {
+        title: 'Imaginary Axis',
+        range: [-2, 2],
+        showgrid: true,
+        gridcolor: 'rgba(200,200,200,0.3)',
+        zeroline: true,
+        zerolinecolor: 'black',
+      },
+      plot_bgcolor: 'white',
+      paper_bgcolor: 'white',
+      showlegend: true,
+    };
+
+    Plotly.newPlot('plot', [trace], layout, { responsive: true });
+  </script>
+</body>
+</html>
